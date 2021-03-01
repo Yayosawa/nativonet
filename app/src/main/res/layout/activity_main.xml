@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/hojanueva"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/bt_take_picture"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="86dp"
+        android:background="@mipmap/camaranegra"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btoSelectImg"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="207dp"
+        android:background="@mipmap/galerianegra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="327dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="81dp"
+        android:text="Captura o elige una foto "
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btoSelectImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_take_picture" />
+</androidx.constraintlayout.widget.ConstraintLayout>

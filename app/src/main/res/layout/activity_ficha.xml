@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/hojanueva"
+    tools:context=".FichaActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2FichaAct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewNext1FichaAct">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewNomCient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/textViewNomComun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btoConfirmaEspeciePred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bordes_redondos"
+                android:onClick="confirmaEspecie"
+                android:paddingHorizontal="40dp"
+                android:text="Confirmar " />
+
+            <TextView
+                android:id="@+id/textViewEstBioGeo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/negro"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewConservacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/plomoOscuro"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/negro"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewDistribucion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/plomoOscuro"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtViewConocesLaEspecie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:text="¿ Conoces esta especie ?"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinnerEspeciesFichaAct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:popupBackground="@color/negro"/>
+
+            <Button
+                android:id="@+id/btoConfirmaEspeciesUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bordes_redondos"
+                android:onClick="mostrarEleccionUsuario"
+                android:paddingHorizontal="40dp"
+                android:text="Confirmar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgViewFichaAct"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@mipmap/circulorelleno"
+        android:onClick="zoomActWithImagePred"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2FichaAct"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2FichaAct"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2FichaAct"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewNext2FichaAct"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btoVolver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="251dp"
+        android:background="@mipmap/volver1"
+        android:onClick="volverMainActivity"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2FichaAct"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewNext1FichaAct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgViewUsarFichaAct"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="140dp"
+        android:background="@mipmap/circulorelleno"
+        android:onClick="zoomActWithImageUser"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/btoVolver"
+        app:layout_constraintTop_toBottomOf="@+id/btoVolver"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txtViewNext1FichaAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="286dp"
+        android:text="Es esta la especie ?"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2FichaAct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btoVolver"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewNext2FichaAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:onClick="cambiarFicha"
+        android:text="Si no, puedes ver la siguiente >>>"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btoVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btoVolver" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/txtViewEspUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2FichaAct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewFichaAct"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

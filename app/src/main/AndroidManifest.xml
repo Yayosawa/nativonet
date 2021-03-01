@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.notyouraveragedev.tensor_image_classification">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application android:theme="@style/Theme.AppCompat.NoActionBar"
+                 android:roundIcon="@mipmap/ic_hojalitre">
+        <activity android:name=".ImageZoomActivity"></activity>
+        <activity android:name=".FichaActivity" />
+        <activity android:name=".MainActivity"
+                  android:label="NativoNet">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
